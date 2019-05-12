@@ -1,0 +1,14 @@
+{
+  "name": "war-of-the-spark-translations",
+  "version": "1.0.0",
+  "author": "Charles Stover <docker@charlesstover.com>",
+  "description": "Translates promotional War of the Spark cards from Japanese to English.",
+  "license": "MIT",
+  "private": true,
+  "repository": "https://github.com/mtgenius/war-of-the-spark-translations.git",
+  "scripts": {
+    "exec": "docker exec -it war-of-the-spark-translations /bin/bash",
+    "logs": "docker logs war-of-the-spark-translations",
+    "stop": "docker stop war-of-the-spark-translations && docker rm war-of-the-spark-translations"
+  }
+}
