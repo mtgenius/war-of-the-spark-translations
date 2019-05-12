@@ -1,10 +1,10 @@
 <?php
 
-function find_static_ability_box($image) {
+function find_static_ability_box($image, $padding_bottom = 40) {
   $type_box = find_type_box($image);
   $static_ability_box = [
     95,
-    $type_box[3] + 28,
+    $type_box[3] + 20,
     680,
     $type_box[3] + 29
   ];
@@ -22,6 +22,6 @@ function find_static_ability_box($image) {
       break;
     }
   }
-  $static_ability_box[3] = $static_ability_box[3] - 12;
+  $static_ability_box[3] = $static_ability_box[3] - $padding_bottom;
   return $static_ability_box;
 }
