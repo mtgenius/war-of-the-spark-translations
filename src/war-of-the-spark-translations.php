@@ -45,20 +45,21 @@ include './utils/magic-erase.php';
 
 
 //Translate card name.
-$name_box_jp = [ 60, 42, 530, 86 ];
-$name_box_en = [ 60, 42, 560, 86 ];
+$name_box_jp = [ 60, 42, 560, 86 ];
+$name_box_en = [ 60, 42, 500, 86 ];
 $name_text_jp = find_text($promo_jp, $name_box_jp, 1);
 magic_erase($promo_en, $name_text_jp);
 $name_text_en = find_text($en, $name_box_en, 1, 128);
-// copy_pixels_onto_average($en, $promo_en, $name_text_en, $name_box_en, 45);
 copy_pixels($en, $promo_en, $name_text_en);
+// copy_pixels_onto_average($en, $promo_en, $name_text_en, $name_box_en, 60);
 
 // Translate type box
 $type_box = find_type_box($promo_jp);
 $type_text_jp = find_text($promo_jp, $type_box, 2);
 magic_erase($promo_en, $type_text_jp);
 $type_text_en = find_text($en, $type_box, 1);
-copy_pixels_onto_average($en, $promo_en, $type_text_en, $type_box);
+copy_pixels($en, $promo_en, $type_text_en);
+// copy_pixels_onto_average($en, $promo_en, $type_text_en, $type_box);
 
 // Translate the static ability.
 $static_ability_box = find_static_ability_box($promo_jp);
@@ -74,8 +75,8 @@ $ability_text1_jp = find_text($promo_jp, $ability_box1, 2);
 $ability_text2_jp = find_text($promo_jp, $ability_box2, 2);
 magic_erase($promo_en, $ability_text1_jp);
 magic_erase($promo_en, $ability_text2_jp);
-$ability_text1_en = find_text($en, $ability_box1, 1);
-$ability_text2_en = find_text($en, $ability_box2, 1);
+$ability_text1_en = find_text($en, $ability_box1, 1, 112);
+$ability_text2_en = find_text($en, $ability_box2, 1, 128);
 copy_pixels($en, $promo_en, $ability_text1_en);
 copy_pixels($en, $promo_en, $ability_text2_en);
 

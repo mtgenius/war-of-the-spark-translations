@@ -4,7 +4,7 @@ function find_ability_box1($image) {
 
   // Bottom has a MAX of 915.
   // 1040 (card height) - 125 (loyalty height)
-  $bottom = 900;
+  $bottom = 1040 - 120;
 
   $static_ability_box = find_static_ability_box($image);
   return [

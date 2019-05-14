@@ -36,7 +36,7 @@ function find_type_box($image) {
     }
 
     if ($errors < $error_threshold) {
-      return array(57, $y - 55, 645, $y - 12);
+      return [ 57, $y - 55, 560, $y - 12 ];
     }
   }
 }
