@@ -46,7 +46,7 @@ include './utils/magic-erase.php';
 
 //Translate card name.
 $name_box_jp = [ 60, 42, 560, 86 ];
-$name_box_en = [ 60, 42, 500, 86 ];
+$name_box_en = [ 60, 42, 560, 86 ];
 $name_text_jp = find_text($promo_jp, $name_box_jp, 1);
 magic_erase($promo_en, $name_text_jp);
 $name_text_en = find_text($en, $name_box_en, 1, 128);
