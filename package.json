@@ -7,8 +7,11 @@
   "private": true,
   "repository": "https://github.com/mtgenius/war-of-the-spark-translations.git",
   "scripts": {
+    "build": "docker build -t mtgenius/war-of-the-spark-translations .",
+    "build-run": "npm run stop && npm run build && npm run run",
     "exec": "docker exec -it war-of-the-spark-translations /bin/bash",
     "logs": "docker logs war-of-the-spark-translations",
+    "run": "docker run --detach --name war-of-the-spark-translations --network reverse-proxy --restart always mtgenius/war-of-the-spark-translations",
     "stop": "docker stop war-of-the-spark-translations && docker rm war-of-the-spark-translations"
   }
 }
