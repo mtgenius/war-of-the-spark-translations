@@ -2,6 +2,13 @@
 
 Translates promotional War of the Spark cards from Japanese to English.
 
+The translated and touched up card images can be found in the `images`
+directory. The pre-touch-up, computer-generated card images can be found in the
+`images/generated` directory.
+
+The card image touch ups are courtesy of
+[/u/malgox](https://www.reddit.com/user/malgox).
+
 ## Relevant Media
 
 * [Reddit submission](https://www.reddit.com/r/magicTCG/comments/bocw0h/i_wrote_a_program_to_translate_the_japanese_war/)
